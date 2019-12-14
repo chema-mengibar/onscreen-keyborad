@@ -1,0 +1,10 @@
+buttonsPanel =  [] #list(range(len(buttons)))
+for label in buttons:
+  cmd = partial(click, label)
+  btn =  tk.Button(lf, text=buttons[ix]['label'], width=5, takefocus = 0, command= lambda: buttons[ix]['click']())
+  buttonsPanel.append( btn )
+  buttonsPanel[ix].grid(row=r, column=c)
+  ix += 1
+  c += 1
+
+root.mainloop()
